@@ -8,3 +8,5 @@ hachoir
 numpy
 beautifulsoup4
 yt-dlp
+https://github.com/Mrvishal2k2/pyrogram-old/archive/asyncio-dev.zip
+
