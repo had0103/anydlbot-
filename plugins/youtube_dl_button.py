@@ -139,9 +139,7 @@ async def youtube_dl_call_back(bot, update):
         ]
     else:
         # command_to_exec = ["youtube-dl", "-f", youtube_dl_format, "--hls-prefer-ffmpeg", "--recode-video", "mp4", "-k", youtube_dl_url, "-o", download_directory]
-        minus_f_format = youtube_dl_format
-        if "youtu" in youtube_dl_url:
-            minus_f_format = youtube_dl_format + "+bestaudio"
+        minus_f_format = youtube_dl_format + "+bestaudio"
         command_to_exec = [
             "youtube-dl",
             "-c",
@@ -283,7 +281,6 @@ async def youtube_dl_call_back(bot, update):
                 await bot.send_document(
                     chat_id=update.message.chat.id,
                     document=download_directory,
-                    thumb=thumb_image_path,
                     caption=description,
                     parse_mode="HTML",
                     # reply_markup=reply_markup,
